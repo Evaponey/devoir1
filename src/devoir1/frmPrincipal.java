@@ -446,7 +446,7 @@ public class frmPrincipal extends javax.swing.JFrame {
      
      
      if cboCategories
-     lblRemboursement.setText("Rembousement de 30eupros");       
+     lblRemboursement.setText("Remboursement de 30eupros");       
       
    
         

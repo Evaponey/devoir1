@@ -332,7 +332,7 @@ public class frmPrincipal extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(lblBinaire, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(26, 26, 26)
+                        .addGap(41, 41, 41)
                         .addComponent(jLabel13)
                         .addGap(11, 11, 11)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -362,34 +362,36 @@ public class frmPrincipal extends javax.swing.JFrame {
         // Exercice n°1
         
         // A vous de jouer
-        double prime;
-           if(txtAge.getText().compareTo("")==0)
-        {
-            JOptionPane.showMessageDialog(this, "Veuillez saisir votre age");
-        } 
-        else if(cboSexe.getSelectedItems().compareTo("")==0)
-        {
-            JOptionPane.showMessageDialog(this, "Veuillez indiquer votre sexe);
-        }
-        else
         
+    if(sldNbAnnees.getValue()>5)
+     {  
+     lblPrime.setText("Non on ne paye pas la prime");
+    }
+     
+    else {
+      lblPrime.setText("Payez la prime");
+     }
+          
         
-        if(cboSexe.getSelectedItem().toString().compareTo("Homme")==0 && Integer.parseInt(txtAge.getText()>22)
-      
+    if (cboSexe.getSelectedItem().toString().compareTo("Homme")==0 && Integer.parseInt(txtAge.getText())>=22)
+          { 
+    lblPrime.setText("Payez la prime");
+          }
+            
+    else 
             {
-        JOptionPane.showMessageDialog(this, "Payer la prime); 
+       lblPrime.setText("Ne pas payer la prime");
+                 
+                              
+    if(Integer.parseInt(txtAge.getText())>20 && Integer.parseInt(txtAge.getText())>=30)
+          lblPrime.setText("Payez la prime");
             }
-            else
-            {
-                
-           if(Integer.ParseInt(TxtAge.getText())>20 && Integer.parseInt(txtAgegetText())>30)
-            }
-             JOptionPane.showMessageDialog(this, "payer la prime);"
-                    
-           if(sldNbAnnees.getSelectedItem().toString().compareTo("Homme")==0 && Integer.parseInt(txtAge.getText()>5)
-                   
-           JOptionPane.showMessageDialog(this, "Ne pas payer la prime);
-        
+         
+    else
+           {
+           lblPrime.setText("Ne pas payer la prime");
+           
+     }      
     }//GEN-LAST:event_btnPrimeMouseClicked
 
     
@@ -404,22 +406,22 @@ public class frmPrincipal extends javax.swing.JFrame {
        
         if (txtNombre.getText().compareTo("")==0)
      {
-        JOptionPane.showMessageDialog(this,Veuillez saisir votre nombre)     
+        lblResultat.setText("Veuillez saisir votre nombre");     
      }
         
-        else
-     {   
-        lblResultat.setText("");
-     } 
-         for(int i = 1 ; i <= Integer.parseInt(txtNombre.getText()) ; i++)
-            {
-                String ligne = "";
+        
+        for(int i = 1 ; i <= Integer.parseInt(txtNombre.getText()) ; i++)
+      {
+             txtNombre= i+(1/i+1);
+       }
+            
                 
-         for(int j = 1 ; j <= i  ; j++)
+        for(int j = 1 ; j <=   ; j++);
                 {
-                    ligne = ligne + " 1/i+1 ";
+             txtNombre=txtNombre*i++;
+                  
                 }
-                lblResultat.setText(lblResultat.getText() + ligne + "\n");
+             
              
      
      
@@ -434,6 +436,19 @@ public class frmPrincipal extends javax.swing.JFrame {
         // Exercice n°3
         
         // A vous de jouer
+          if (sldNbJours.getText())>=7;
+  {
+     lblRemboursement.setText("Pas de remboursement");  
+  } 
+          else  
+     
+     lblRemboursement.setText(" remboursement"); 
+     
+     
+     if cboCategories
+     lblRemboursement.setText("Rembousement de 30eupros");       
+      
+   
         
     }//GEN-LAST:event_btnRemboursementMouseClicked
 
@@ -442,16 +457,13 @@ public class frmPrincipal extends javax.swing.JFrame {
         
         // A vous de jouer
         
-            if (txtEntier.getText().compareTo("")==0)
-     {
-     JOptionPane.showMessageDialog(this,Veuillez saisir votre entier)  
-     }
-            else 
-    {
-      lblBinaire.setText();
-                    
-    }//GEN-LAST:event_btnBinaireMouseClicked
+        
 
+     
+    }//GEN-LAST:event_btnBinaireMouseClicked
+ 
+ 
+  
     /**
      * @param args the command line arguments
      */
